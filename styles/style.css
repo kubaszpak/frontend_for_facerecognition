@@ -24,17 +24,17 @@ body {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  width: 250px;
+  width: 4000px;
   overflow: hidden;
   z-index: 999;
 }
 
 .face-container {
   position: absolute;
-  width: 39vmax;
-  height: 39vmax;
+  width: 35vmax;
+  height: 37vmax;
   left: 13.5vmax;
-  top: 3.8vmax;
+  top: 2.8vmax;
   border: 20px solid #bfd7ff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -43,23 +43,45 @@ body {
   border-radius: 5%;
 }
 
-.buttons button {
+.data-container {
   position: absolute;
+  top: 11.1vmax;
+  left: 62vmax;
+  background-color: black;
+}
+
+.button2 {
+  margin-left: 10px;
+}
+
+.buttons button {
+  float: 1;
   height: 6.6vmax;
   width: 15.1vmax;
   background: rgba(226, 253, 255, 0.62);
   border-radius: 11.5vmax;
-  top: 11.1vmax;
   outline: none;
   border: none;
 }
 
-.button1 {
-  left: 62vmax;
+.checkmark {
+  width: 2vmax;
 }
 
-.button2 {
-  left: 80vmax;
+.wrong {
+  width: 2vmax;
+}
+
+.nose {
+  margin: 0 auto;
+  margin-top: 2vmax;
+  width: 6vmax;
+  height: 4vmax;
+  background: rgba(226, 253, 255, 0.62);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  text-align: center;
+  border-radius: 35%;
 }
 
 .triangle {
