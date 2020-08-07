@@ -21,10 +21,10 @@ body {
 
 .sidebar-outer {
   position: absolute;
-  top: 0px;
   right: 0px;
   bottom: 0px;
-  width: 4000px;
+  width: 20vmax;
+  height: 20vmax;
   overflow: hidden;
   z-index: 999;
 }
@@ -47,11 +47,22 @@ body {
   position: absolute;
   top: 11.1vmax;
   left: 62vmax;
-  background-color: black;
+}
+
+.button1 {
+  --color: #084075;
+  --hover: #220875;
 }
 
 .button2 {
-  margin-left: 10px;
+  --color: #084075;
+  --hover: #220875;
+}
+
+button {
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .buttons button {
@@ -60,8 +71,39 @@ body {
   width: 15.1vmax;
   background: rgba(226, 253, 255, 0.62);
   border-radius: 11.5vmax;
-  outline: none;
   border: none;
+}
+
+.button1:hover,
+.button1:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  -webkit-box-shadow: 0 0 0 1em rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 1em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+            box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+            box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+.button2:hover,
+.button2:focus {
+  -webkit-box-shadow: inset 0 0 0 0.5em var(--hover);
+          box-shadow: inset 0 0 0 0.5em var(--hover);
+}
+
+.button2 {
+  margin-left: 10px;
 }
 
 .checkmark {
@@ -81,7 +123,30 @@ body {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   text-align: center;
-  border-radius: 35%;
+  border-radius: 11.5vmax;
+}
+
+.holder {
+  display: block;
+  z-index: 1;
+  margin: 0 auto;
+  margin-top: 2vmax;
+  width: 31.2vmax;
+  height: 7.1vmax;
+  border: 5px solid #dddddd;
+  text-align: center;
+  border-radius: 11.5vmax;
+}
+
+.holder input {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  text-align: center;
 }
 
 .triangle {
